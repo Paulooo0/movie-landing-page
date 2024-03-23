@@ -1,0 +1,78 @@
+@use 'variables';
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: variables.$backgroundColor;
+  transition: background-color .5s ease;
+  z-index: 1;
+  margin-bottom: 55px;
+
+  &--is-hidden {
+    background-color: transparent;
+    transition: transparent .5 ease;
+    
+    .header {
+      &__links__item {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5 ease;
+      }
+    }
+  }
+
+  &__container {
+    padding: 8px 32px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+  
+    @media (max-width: 768px) {
+      padding: 0 12px 0 20px;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    max-width: 80px;
+    width: 100%;
+    margin: 5px;
+    transition: opacity .5 ease;
+    
+    @media (max-width: 768px) {
+      max-width: 64px;
+    }
+  }
+  
+  &__links {
+    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    
+    &__item {
+      transition: opacity .5 ease;
+      
+      &__logo {
+        width: 30px;
+        margin-right: 8px;
+      }
+    }
+  }
+  
+  .button {
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0px 8px;
+  
+    @media (max-width: 768px) {
+      font-size: 13px;
+      padding: 0px 8px;
+      height: 48px;
+      letter-spacing: 1.5px;
+    }
+  }
+}

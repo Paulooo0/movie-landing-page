@@ -1,0 +1,42 @@
+@use 'variables';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: variables.$footerBackgroundColor;
+
+  &__container {
+    display: flex;
+    max-width: 1440px;
+    width: 90%;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 64px;
+  }
+  
+  &__links {
+    display: flex;
+    gap: 48px;
+    margin: 32px 0;
+    
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 6px;
+      }
+      
+      &__logo {
+        width: 30px;
+        margin-right: 4px;
+      }
+    }
+  }
+}

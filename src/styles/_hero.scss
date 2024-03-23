@@ -1,0 +1,96 @@
+@use 'variables';
+
+.hero {
+  padding: 8vw 5.6vw 5.6vw 3vw;
+  min-height: 80vh;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(0deg,variables.$backgroundColor,rgba(0, 0, 0, 0) 20%)
+  ,linear-gradient(90deg,variables.$backgroundColor,rgba(0, 0, 0, 0) 50%)
+  ,linear-gradient(90deg,variables.$backgroundColor,rgba(0, 0, 0, 0) 50%)
+  ,url("../../dist/images/8b86c62e1f77bd9bac9a47cc362e4d76ae660158fdcc7221ce27ab82fcc3c0aa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -54px;
+    
+  @media (max-width: 768px) {
+    background: linear-gradient(90deg,variables.$backgroundColor,rgba(0, 0, 0, 0) 3%)
+    ,linear-gradient(270deg,variables.$backgroundColor,rgba(0, 0, 0, 0) 3%)
+    ,url("../../dist/images/8b86c62e1f77bd9bac9a47cc362e4d76ae660158fdcc7221ce27ab82fcc3c0aa.jpg");
+    padding-top: calc(50vw + 25px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 55px;
+  }
+
+    
+    
+  &__content {
+  display: flex;
+  width: 660px;
+  height: 540px;
+  text-align: start;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    height: auto;
+    margin-bottom: 60px;
+    width: auto;
+  }
+
+    &__title {
+      font-size: 64px;
+      margin-bottom: 60px;
+      
+      @media (max-width: 768px) {
+        margin-top: 32px;
+        margin-bottom: 0px;
+        font-size: 40px;
+      }
+    }
+    
+    &__description {
+      font-size: 24px;
+      text-align: start;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin: 32px 0;
+      }
+    }
+    
+    &__specs {
+      display: flex;
+      gap: 16px;
+      margin: 16px 0;
+      
+      &__item {
+        color: #999999;
+        font-size: 24px;
+        
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__genres {
+      display: flex;
+      gap: 16px;
+      
+      &__item {
+        font-size: 24px;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
